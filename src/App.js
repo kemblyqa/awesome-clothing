@@ -1,10 +1,15 @@
-import "./styles.scss";
-import categories from "./categories.json";
-import { Directory } from "./components/Directory";
+import { Route, Routes } from "react-router-dom";
+
+import { Home } from "./routes/home";
+import { Navigation } from "./routes/navigation";
 
 const App = () => {
   return (
-    <Directory categories={categories} />
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
   );
 };
 
