@@ -8,15 +8,16 @@ import {
   NavLinks,
 } from "./styles";
 
-import { UserContext } from "../../contexts/UserContext";
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 import { signOutUser } from "../../utils/firebase";
 import { CartIcon } from "../../components/CartIcon";
 import { CartDropdown } from "../../components/CartDropdown";
 import { CartContext } from "../../contexts/CartContext";
+import { useSelector } from "react-redux";
+import { selectCurrentUser } from "../../store/user/user.selector";
 
 export const Navigation = () => {
-  const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector(selectCurrentUser);
   const { isCartOpen } = useContext(CartContext);
 
   return (
