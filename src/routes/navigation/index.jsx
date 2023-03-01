@@ -14,7 +14,7 @@ import { CartIcon } from "../../components/CartIcon";
 import { CartDropdown } from "../../components/CartDropdown";
 import { CartContext } from "../../contexts/CartContext";
 import { useSelector } from "react-redux";
-import { selectCurrentUser } from "../../store/user/user.selector";
+import { selectCurrentUser } from "../../store/user/selector";
 
 export const Navigation = () => {
   const currentUser = useSelector(selectCurrentUser);
