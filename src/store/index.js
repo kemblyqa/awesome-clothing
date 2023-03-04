@@ -9,7 +9,7 @@ import logger from "redux-logger";
 import { rootReducer } from "./root-reducer";
 import thunk from "redux-thunk";
 
-const persistConfig = { key: "root", storage, blacklist: ["user"] };
+const persistConfig = { key: "root", storage, whitelist: ["cart"] };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
